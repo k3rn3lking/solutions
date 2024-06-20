@@ -3,38 +3,15 @@
 #include<stdio.h>
 
 int main(){
-  int num1=0,num2=0,num3=0;
-  int array[1000];
-  int array1[1000];
-  int array3[1000];
+ //total number divisible by 3 in rangle 1 to 1000 are 333
+ //total number divisble by 5 in rangle 1 to  1000 are 199
+ //total number divisble by 15 in rangle 1 to  1000 are 66
+// now use formulae sum of all terms=((number of terms)*(first+last term))/2
+  int sum1=((333)*(3+999))/2;
+  int sum2=((199)*(5+995))/2;
+  int sum3=((66)*(15+990))/2;
+  printf("%d",sum1+sum2-sum3);
 
-  for(int i=1;i<1000;i++){
-    if(i%3==0){
-     array[num1++]=i;
-    }
-    if(i%5==0){
-      array1[num2++]=i;
-    }
-    if(i%15==0){
-      array3[num3++]=i;
-    }
-  }
-  
-  int sum=0,sum1=0,sum2=0;
-
-  for(int i=0;i<num1;i++){
-    sum+=array[i];
-  }
-
-  for(int i=0;i<num2;i++){
-    sum1+=array1[i];
-  }
-  
-  for(int i=0;i<num3;i++){
-    sum2+=array3[i];
-  }
-
-  printf("%d",sum+sum1-sum2);
-  return 0;
+ return 0;
 
 }
